@@ -80,10 +80,9 @@ class Places:
         db.places.pretty_link = Field.Virtual('pretty_link', lambda record: str(\
             DIV(
                 A(
-                    IMG(_src=record.places.national_flag), # XXX how to use represent?
+                    IMG(_src=record.places.national_flag), 
                     #db.places.national_flag.represent(record.national_flag),
                     ' %s' % (record.places.country), 
-                    #XXX _href=record.places.pretty_url
                     _href=URL(c='default', f='view', extension=False, args=safe(record.places.country, record.places.country_id))
                 )
             )
@@ -115,14 +114,12 @@ class Places:
             
 
     def search(self, logic=None, limitby=None):
-        # XXX cache?
         return self.db(logic).select(limitby=limitby, orderby=self.db.places.country_id)
 
 
     def load(self):
         """Load places from CSV file and delete any existing
         """
-        #filename = os.path.join(request.folder, 'private', 'countries.csv')
         text = """\
 AD,Andorra,Andorra la Vella,468,84000,EU,.ad,EUR,Euro,376,AD###,^(?:AD)*(\d{3})$,ca,"ES,FR"
 AE,United Arab Emirates,Abu Dhabi,82880,4975593,AS,.ae,AED,Dirham,971,,,"ar-AE,fa,en,hi,ur","SA,OM"
