@@ -81,7 +81,6 @@ class Captcha(DIV):
 
         # Generate a CAPTCHA
         g = PseudoGimpy()
-        # XXX need to prevent examine image - in session?
         captcha = DIV(
             IMG(_src=g.base64()),
             BR(),

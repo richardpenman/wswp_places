@@ -69,12 +69,6 @@ def sitemap():
     return dict(records=places.search())
 
 
-# XXX need to password protect
-def flush():
-    places.load()
-    return 'Places loaded'
-
-
 def user():
     """
     exposes:
@@ -102,7 +96,3 @@ def trap():
 
 def dynamic():
     return dict()
-
-
-def test():
-    return dict(request=request)
