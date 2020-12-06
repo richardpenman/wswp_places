@@ -1,4 +1,4 @@
-This repository contains the source code the example website used throughout the book *Web Scraping with Python*, published by Packt Publishing. This app is available live at [example.webscraping.com](http://example.webscraping.com) but can also be run locally. When run locally the app will not block IP's that download faster than the thresholds specified in *models/3_cache.db*, which means you can test your crawler faster.
+This repository contains the source code the example website used throughout the book *Web Scraping with Python*, published by Packt Publishing. When run locally the app will not block IP's that download faster than the thresholds specified in *models/3_cache.db*, which means you can test your crawler faster.
 
 
 ## Install ##
@@ -13,7 +13,7 @@ In the shell the installation instructions are as follows:
     unzip web2py_src.zip
     # now download the app
     cd web2py/applications
-    hg clone ssh://hg@bitbucket.org/wswp/places
+    git clone git@github.com:richardpenman/wswp_places.git places
     # now start the web2py server with a password for the admin interface
     cd ..
     python web2py.py --password=<password>
