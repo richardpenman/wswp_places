@@ -9,6 +9,6 @@ This package contains functionality specific to visual CAPTCHA tests.
 #
 
 # Convenience imports
-from Base import *
+from Captcha.Visual.Base import *
 
 ### The End ###
