@@ -25,7 +25,7 @@ else:
 
 response.generic_patterns = ['*'] if request.is_local else []
 
-from gluon.tools import Auth, Crud, Service, PluginManager, Recaptcha, prettydate
+from gluon.tools import Auth, Crud, Service, PluginManager, Recaptcha2 as Recaptcha, prettydate
 auth = Auth(db)
 
 crud, service, plugins = Crud(db), Service(), PluginManager()

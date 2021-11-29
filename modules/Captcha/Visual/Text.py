@@ -9,7 +9,7 @@ Text generation for visual CAPTCHAs.
 
 import random, os
 from Captcha import Visual, File
-import ImageFont, ImageDraw
+from PIL import ImageFont, ImageDraw
 
 
 class FontFactory(File.RandomFileFactory):
